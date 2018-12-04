@@ -1,0 +1,74 @@
+C:\Users\user\source\repos\com_port\com_port\bin\Debug\com_port.exe.config
+C:\Users\user\source\repos\com_port\com_port\bin\Debug\com_port.exe
+C:\Users\user\source\repos\com_port\com_port\bin\Debug\com_port.pdb
+C:\Users\user\source\repos\com_port\com_port\obj\Debug\com_port.Form1.resources
+C:\Users\user\source\repos\com_port\com_port\obj\Debug\com_port.Properties.Resources.resources
+C:\Users\user\source\repos\com_port\com_port\obj\Debug\com_port.csproj.GenerateResource.cache
+C:\Users\user\source\repos\com_port\com_port\obj\Debug\com_port.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\com_port\com_port\obj\Debug\com_port.exe
+C:\Users\user\source\repos\com_port\com_port\obj\Debug\com_port.pdb
+C:\Users\user\source\repos\com_port\com_port\obj\Debug\com_port.csprojAssemblyReference.cache
+C:\Users\user\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\bin\Debug\com_port.exe.config
+C:\Users\user\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\bin\Debug\com_port.exe
+C:\Users\user\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\bin\Debug\com_port.pdb
+C:\Users\user\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.csprojAssemblyReference.cache
+C:\Users\user\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.Form1.resources
+C:\Users\user\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.Properties.Resources.resources
+C:\Users\user\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.csproj.GenerateResource.cache
+C:\Users\user\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.csproj.CoreCompileInputs.cache
+C:\Users\user\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.exe
+C:\Users\user\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.pdb
+D:\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\bin\Debug\com_port.exe.config
+D:\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\bin\Debug\com_port.exe
+D:\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\bin\Debug\com_port.pdb
+D:\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.csprojAssemblyReference.cache
+D:\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.Form1.resources
+D:\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.Properties.Resources.resources
+D:\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.csproj.GenerateResource.cache
+D:\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.csproj.CoreCompileInputs.cache
+D:\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.exe
+D:\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.pdb
+C:\Users\user\OneDrive\New Folder\домашнее задание\стенд\программа тестирования c#\com_port\com_port\obj\Debug\com_port.myForm.resources
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\com_port.exe.config
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\com_port.exe
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\com_port.pdb
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.Properties.Resources.resources
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.csproj.GenerateResource.cache
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.csproj.CoreCompileInputs.cache
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.exe
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.pdb
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.csprojAssemblyReference.cache
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.Graphics.resources
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.Form1.resources
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\ClosedXML.dll
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\ExcelNumberFormat.dll
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\FastMember.Signed.dll
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\System.IO.FileSystem.Primitives.dll
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\System.IO.Packaging.dll
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\ClosedXML.xml
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\ExcelNumberFormat.xml
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.csproj.CopyComplete
+D:\PROJECTS\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.sensor_measure.resources
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.csprojResolveAssemblyReference.cache
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.Form1.resources
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.Graphics.resources
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.Properties.Resources.resources
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.sensor_measure.resources
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.csproj.GenerateResource.Cache
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.csproj.CoreCompileInputs.cache
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.exe
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\obj\Debug\com_port.pdb
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\com_port.exe.config
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\com_port.exe
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\com_port.pdb
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\ClosedXML.dll
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\ExcelNumberFormat.dll
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\FastMember.Signed.dll
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\System.IO.Packaging.dll
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\ClosedXML.xml
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\ilia1\OneDrive\copterStand\программа тестирования c#\com_port\com_port\bin\Debug\ExcelNumberFormat.xml
