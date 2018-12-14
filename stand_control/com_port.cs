@@ -15,7 +15,7 @@ namespace com_port
         static public Form1 myForm = new Form1();
         static public Graphics graphics   = new Graphics();
         static public Protocol myProtocol = new Protocol();
-        static public sensor_measure my_sensor_measure = new sensor_measure();
+        static public window_test my_sensor_measure = new window_test();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

@@ -50,6 +50,8 @@ namespace com_port
             voltage.Text = Convert.ToString(Protocol.measures.voltage);
             thrust.Text = Convert.ToString(Protocol.measures.thrust); 
             turns.Text = Convert.ToString(Protocol.measures.turns);
+            textBox3.Text = Convert.ToString(Protocol.measures.capacity);
+            textBox4.Text = Convert.ToString(Protocol.measures.g_W);
 
         }
         //================================================================================================
@@ -143,6 +145,7 @@ namespace com_port
             Init_image();
             checkBox1.Checked = true;
             textBox2.Text = "1";
+            comboBox2.Text = "921600";
         }
         //================================================================================================
         void GetAvailablePorts()
@@ -350,9 +353,19 @@ namespace com_port
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Program.my_sensor_measure = new sensor_measure();
+            Program.my_sensor_measure = new window_test();
             Program.my_sensor_measure.Hide();
             Program.my_sensor_measure.Show();
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

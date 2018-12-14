@@ -31,6 +31,7 @@ namespace com_port
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button_connect = new System.Windows.Forms.Button();
             this.button_close = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -74,7 +75,14 @@ namespace com_port
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -98,7 +106,7 @@ namespace com_port
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(75, 23);
             this.button_close.TabIndex = 1;
-            this.button_close.Text = "close";
+            this.button_close.Text = "Disconnect";
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.Button_close_Click);
             // 
@@ -123,6 +131,7 @@ namespace com_port
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 3;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label_comNumber
             // 
@@ -144,7 +153,7 @@ namespace com_port
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(12, 83);
+            this.trackBar1.Location = new System.Drawing.Point(11, 76);
             this.trackBar1.Maximum = 1000;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(210, 45);
@@ -182,7 +191,7 @@ namespace com_port
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(3, 193);
+            this.label4.Location = new System.Drawing.Point(0, 184);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(197, 25);
             this.label4.TabIndex = 10;
@@ -191,9 +200,9 @@ namespace com_port
             // turns
             // 
             this.turns.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.turns.Location = new System.Drawing.Point(8, 221);
+            this.turns.Location = new System.Drawing.Point(0, 215);
             this.turns.Name = "turns";
-            this.turns.Size = new System.Drawing.Size(100, 41);
+            this.turns.Size = new System.Drawing.Size(104, 41);
             this.turns.TabIndex = 11;
             this.turns.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -201,35 +210,35 @@ namespace com_port
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(3, 285);
+            this.label5.Location = new System.Drawing.Point(3, 259);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 25);
+            this.label5.Size = new System.Drawing.Size(45, 25);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Ток потребления";
+            this.label5.Text = "Ток";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(3, 370);
+            this.label6.Location = new System.Drawing.Point(4, 331);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 25);
+            this.label6.Size = new System.Drawing.Size(129, 25);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Вольтаж  сети";
+            this.label6.Text = "Напряжение";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // curent
             // 
             this.curent.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.curent.Location = new System.Drawing.Point(8, 313);
+            this.curent.Location = new System.Drawing.Point(5, 287);
             this.curent.Name = "curent";
-            this.curent.Size = new System.Drawing.Size(100, 41);
+            this.curent.Size = new System.Drawing.Size(99, 41);
             this.curent.TabIndex = 15;
             // 
             // voltage
             // 
             this.voltage.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.voltage.Location = new System.Drawing.Point(8, 398);
+            this.voltage.Location = new System.Drawing.Point(6, 359);
             this.voltage.Name = "voltage";
             this.voltage.Size = new System.Drawing.Size(98, 41);
             this.voltage.TabIndex = 16;
@@ -237,9 +246,9 @@ namespace com_port
             // thrust
             // 
             this.thrust.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.thrust.Location = new System.Drawing.Point(10, 482);
+            this.thrust.Location = new System.Drawing.Point(7, 431);
             this.thrust.Name = "thrust";
-            this.thrust.Size = new System.Drawing.Size(98, 41);
+            this.thrust.Size = new System.Drawing.Size(97, 41);
             this.thrust.TabIndex = 18;
             this.thrust.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -247,7 +256,7 @@ namespace com_port
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(5, 454);
+            this.label7.Location = new System.Drawing.Point(9, 403);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 25);
             this.label7.TabIndex = 17;
@@ -257,9 +266,9 @@ namespace com_port
             // test_text
             // 
             this.test_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.test_text.Location = new System.Drawing.Point(10, 149);
+            this.test_text.Location = new System.Drawing.Point(0, 140);
             this.test_text.Name = "test_text";
-            this.test_text.Size = new System.Drawing.Size(157, 41);
+            this.test_text.Size = new System.Drawing.Size(104, 41);
             this.test_text.TabIndex = 20;
             this.test_text.TextChanged += new System.EventHandler(this.test_text_TextChanged);
             // 
@@ -327,16 +336,16 @@ namespace com_port
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(5, 121);
+            this.label11.Location = new System.Drawing.Point(0, 112);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(167, 25);
+            this.label11.Size = new System.Drawing.Size(208, 25);
             this.label11.TabIndex = 28;
-            this.label11.Text = "Угол дисбаланса";
+            this.label11.Text = "Угол установки груза";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(274, 92);
+            this.pictureBox1.Location = new System.Drawing.Point(323, 115);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(350, 350);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -357,7 +366,7 @@ namespace com_port
             // progressBar1
             // 
             this.progressBar1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.progressBar1.Location = new System.Drawing.Point(6, 94);
+            this.progressBar1.Location = new System.Drawing.Point(0, 86);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(170, 23);
             this.progressBar1.TabIndex = 34;
@@ -367,18 +376,18 @@ namespace com_port
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(6, 19);
+            this.label12.Location = new System.Drawing.Point(6, 11);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(180, 25);
+            this.label12.Size = new System.Drawing.Size(200, 25);
             this.label12.TabIndex = 35;
-            this.label12.Text = "Уровень вибрации";
+            this.label12.Text = "Уровень дисбаланса";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(6, 47);
+            this.textBox1.Location = new System.Drawing.Point(2, 39);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 41);
+            this.textBox1.Size = new System.Drawing.Size(102, 41);
             this.textBox1.TabIndex = 36;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
@@ -386,7 +395,7 @@ namespace com_port
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(114, 231);
+            this.label13.Location = new System.Drawing.Point(102, 224);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(89, 25);
             this.label13.TabIndex = 37;
@@ -396,37 +405,37 @@ namespace com_port
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(121, 329);
+            this.label14.Location = new System.Drawing.Point(113, 297);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(42, 25);
+            this.label14.Size = new System.Drawing.Size(26, 25);
             this.label14.TabIndex = 38;
-            this.label14.Text = "mA";
+            this.label14.Text = "A";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(121, 408);
+            this.label15.Location = new System.Drawing.Point(113, 369);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(42, 25);
+            this.label15.Size = new System.Drawing.Size(26, 25);
             this.label15.TabIndex = 39;
-            this.label15.Text = "mV";
+            this.label15.Text = "V";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(123, 492);
+            this.label16.Location = new System.Drawing.Point(114, 441);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(55, 25);
+            this.label16.Size = new System.Drawing.Size(23, 25);
             this.label16.TabIndex = 40;
-            this.label16.Text = "mgm";
+            this.label16.Text = "g";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(182, 57);
+            this.label17.Location = new System.Drawing.Point(107, 47);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(23, 25);
             this.label17.TabIndex = 41;
@@ -436,7 +445,7 @@ namespace com_port
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(173, 159);
+            this.label18.Location = new System.Drawing.Point(110, 150);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(20, 25);
             this.label18.TabIndex = 42;
@@ -497,6 +506,12 @@ namespace com_port
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.label22);
+            this.groupBox2.Controls.Add(this.textBox3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.turns);
             this.groupBox2.Controls.Add(this.label17);
@@ -516,12 +531,65 @@ namespace com_port
             this.groupBox2.Controls.Add(this.test_text);
             this.groupBox2.Controls.Add(this.thrust);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(3, 132);
+            this.groupBox2.Location = new System.Drawing.Point(3, 117);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(219, 529);
+            this.groupBox2.Size = new System.Drawing.Size(283, 544);
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Измерения";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(249, 375);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(29, 13);
+            this.label25.TabIndex = 48;
+            this.label25.Text = "g/W";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(249, 306);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(21, 13);
+            this.label24.TabIndex = 47;
+            this.label24.Text = " W";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(166, 340);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(59, 13);
+            this.label23.TabIndex = 46;
+            this.label23.Text = "грам/ватт";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox4.Location = new System.Drawing.Point(145, 356);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(98, 41);
+            this.textBox4.TabIndex = 45;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(165, 268);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(60, 13);
+            this.label22.TabIndex = 44;
+            this.label22.Text = "Мощность";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.Location = new System.Drawing.Point(145, 287);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(98, 41);
+            this.textBox3.TabIndex = 43;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button2
             // 
@@ -533,11 +601,21 @@ namespace com_port
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(416, 99);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(146, 13);
+            this.label21.TabIndex = 50;
+            this.label21.Text = "угол для  балансного груза";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 668);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -553,8 +631,9 @@ namespace com_port
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button_close);
             this.Controls.Add(this.button_connect);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Консоль управления стендом";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
@@ -614,6 +693,13 @@ namespace com_port
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

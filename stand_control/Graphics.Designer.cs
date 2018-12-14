@@ -37,6 +37,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Graphics));
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -169,6 +170,7 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.chart3);
             this.Controls.Add(this.chart2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Graphics";
             this.Text = "Graphics";
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();

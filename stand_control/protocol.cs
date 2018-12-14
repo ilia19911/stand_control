@@ -26,34 +26,41 @@ namespace com_port
 
     enum Receive_status
     {
-        BUFFER_NOT_BUSY = 0x00,
-        BUFFER_RECEIVE_HEADER = 0x01,
-        BUFFER_RECEIVE_DATA = 0x03,
-        BUFFER_BUSY = 0x04
+        BUFFER_NOT_BUSY         = 0x00,
+        BUFFER_RECEIVE_HEADER   = 0x01,
+        BUFFER_RECEIVE_DATA     = 0x03,
+        BUFFER_BUSY             = 0x04
     }
 
     public struct Average_measure
     {
-        public int thrust ;
+        public double thrust ;
         public int turns  ;
-        public int voltage;
-        public int curent;
+        public double voltage;
+        public double curent;
+        public double capacity;
+        public double g_W;
     }
 
     class Protocol
     {
+        static FFT.KalmanFilterSimple1D Average_amp = new FFT.KalmanFilterSimple1D(f: 1, h: 1, q: 0.01, r: 10); // задаем F, H, Q и R // создаем фильтр калмана
+
+
         public Protocol()
         {
-            flag = 0;
-            throttle = 0;
-            request_measure_turns = 1;
-            adc_value = 70;
-            tx_flag = 0;
-            len_rcv = 0;
+            Average_amp.SetState(0, 0.01); // Задаем начальные значение State и Covariance // ставлю 0, потому что с другим значением график начитается с какой то хуйни
+            
+            flag                    = 0;
+            throttle                = 0;
+            request_measure_turns   = 1;
+            adc_value               = 70;
+            tx_flag                 = 0;
+            len_rcv                 = 0;
         }
 
 
-       static public Accel_data myAccel = new Accel_data();
+       static public Accel_data myAccel         = new Accel_data();
        static Trans_protocol my_tx_Packets      = new Trans_protocol();
        static Trans_protocol my_rx_Packets      = new Trans_protocol();
 
@@ -109,7 +116,7 @@ namespace com_port
 
         }
         //================================================================================================
-         private static void Construct_send_packet(Packet_type type) //запрос измерений акселерометра
+         public static void Construct_send_packet(Packet_type type) //запрос измерений акселерометра
         {
             if (serial.Myserial.IsOpen == true)
             {
@@ -153,7 +160,10 @@ namespace com_port
                         if (num > 0)
                         {
                             byte temp_c = Convert.ToByte(serial.Myserial.ReadByte());
-                            _protocol_processByte(temp_c);
+                            if(_protocol_processByte(temp_c)>0)
+                            {
+                                //_pack_handler();
+                            }
                         }
                     }
                 }
@@ -164,12 +174,13 @@ namespace com_port
             }
         }
         //================================================================================================
-        static void _protocol_processByte(byte new_byte)
+        static int _protocol_processByte(byte new_byte)
         {
            if( my_rx_Packets.Receive_byte(new_byte) != Packet_struct.PACKET_STATUS.NO_PACKETS)
             {
-                my_rx_Packets.Multipack_receive();
+                return my_rx_Packets.Multipack_receive();
             }
+            return 0;
         }
         //================================================================================================
         static void _stop_receive()
@@ -228,10 +239,15 @@ namespace com_port
         //================================================================================================
          static void Get_average_data()
         {
-            measures.thrust = my_rx_Packets.data[0] | (my_rx_Packets.data[1] << 8) | (my_rx_Packets.data[2] << 16);
+            Average_amp.Correct(Byte_to_int(my_rx_Packets.data[7], my_rx_Packets.data[8])); // Применяем алгоритм
+
+            measures.thrust  = (double)(my_rx_Packets.data[0] | (my_rx_Packets.data[1] << 8) | (my_rx_Packets.data[2] << 16));
             //measures.turns = Byte_to_int(my_rx_Packets.structure.data[3], my_rx_Packets.structure.data[4]);
-            measures.voltage = Byte_to_int(my_rx_Packets.data[5], my_rx_Packets.data[6]);
-            measures.curent = Byte_to_int(my_rx_Packets.data[7], my_rx_Packets.data[8]);
+            measures.voltage = (double)(Byte_to_int(my_rx_Packets.data[5], my_rx_Packets.data[6]))/1000;
+            measures.voltage -= 0.190;
+            measures.curent  = Convert.ToDouble(Average_amp.State)/1000;
+            measures.capacity = measures.curent * measures.voltage;
+            measures.g_W     = ( measures.thrust/ measures.capacity );
             try
             {
                 Program.myForm.Invoke(new Action(() => { Program.myForm.Set_average_text(); }));
